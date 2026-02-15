@@ -29,7 +29,26 @@
       </section>
       <section id="route-dashboard" class="kn-app-route" aria-label="Dashboard">
         <h1 class="kn-app-route__heading">Dashboard</h1>
-        <p class="kn-app-route__subtext">This section will be built in the next step.</p>
+        <p class="kn-app-route__subtext">Your overview of job notifications and activity.</p>
+        <div class="kn-dashboard">
+          <div class="kn-dashboard__summary">
+            <div class="kn-card kn-dashboard__card">
+              <span class="kn-dashboard__label">Saved</span>
+              <span class="kn-dashboard__value" id="dashboard-saved-count">0</span>
+            </div>
+            <div class="kn-card kn-dashboard__card">
+              <span class="kn-dashboard__label">This week</span>
+              <span class="kn-dashboard__value" id="dashboard-week-count">0</span>
+            </div>
+          </div>
+          <div class="kn-card kn-dashboard__recent">
+            <h2 class="kn-dashboard__recent-title">Recent activity</h2>
+            <div class="kn-dashboard__empty" id="dashboard-recent-list">
+              <p class="kn-dashboard__empty-text">No notifications yet.</p>
+              <p class="kn-dashboard__empty-hint">When you save jobs or receive digests, they will appear here.</p>
+            </div>
+          </div>
+        </div>
       </section>
       <section id="route-settings" class="kn-app-route" aria-label="Settings">
         <h1 class="kn-app-route__heading">Settings</h1>
