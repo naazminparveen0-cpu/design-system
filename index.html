@@ -43,10 +43,7 @@
           </div>
           <div class="kn-card kn-dashboard__recent">
             <h2 class="kn-dashboard__recent-title">Recent activity</h2>
-            <div class="kn-dashboard__empty" id="dashboard-recent-list">
-              <p class="kn-dashboard__empty-text">No notifications yet.</p>
-              <p class="kn-dashboard__empty-hint">When you save jobs or receive digests, they will appear here.</p>
-            </div>
+            <div id="dashboard-recent-list"></div>
           </div>
         </div>
       </section>
@@ -56,7 +53,16 @@
       </section>
       <section id="route-saved" class="kn-app-route" aria-label="Saved">
         <h1 class="kn-app-route__heading">Saved</h1>
-        <p class="kn-app-route__subtext">This section will be built in the next step.</p>
+        <p class="kn-app-route__subtext">Jobs and notifications you've saved for later.</p>
+        <div class="kn-saved">
+          <form class="kn-saved-form" id="saved-form">
+            <input type="text" class="kn-input kn-saved-form__input" name="title" placeholder="Job title" required />
+            <input type="text" class="kn-input kn-saved-form__input" name="company" placeholder="Company" />
+            <input type="url" class="kn-input kn-saved-form__input" name="url" placeholder="Link (optional)" />
+            <button type="submit" class="kn-btn kn-btn--primary">Save</button>
+          </form>
+          <div class="kn-saved-list" id="saved-list"></div>
+        </div>
       </section>
       <section id="route-digest" class="kn-app-route" aria-label="Digest">
         <h1 class="kn-app-route__heading">Digest</h1>
