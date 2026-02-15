@@ -23,54 +23,73 @@
     </header>
 
     <main class="kn-app__main">
-      <section id="route-home" class="kn-app-route" aria-label="Home">
-        <h1 class="kn-app-route__heading">Home</h1>
-        <p class="kn-app-route__subtext">This section will be built in the next step.</p>
+      <section id="route-home" class="kn-app-route kn-landing" aria-label="Home">
+        <h1 class="kn-landing__headline">Stop Missing The Right Jobs.</h1>
+        <p class="kn-landing__subtext">Precision-matched job discovery delivered daily at 9AM.</p>
+        <a href="/settings" class="kn-btn kn-btn--primary kn-landing__cta" data-route="/settings">Start Tracking</a>
       </section>
+
       <section id="route-dashboard" class="kn-app-route" aria-label="Dashboard">
         <h1 class="kn-app-route__heading">Dashboard</h1>
-        <p class="kn-app-route__subtext">Your overview of job notifications and activity.</p>
-        <div class="kn-dashboard">
-          <div class="kn-dashboard__summary">
-            <div class="kn-card kn-dashboard__card">
-              <span class="kn-dashboard__label">Saved</span>
-              <span class="kn-dashboard__value" id="dashboard-saved-count">0</span>
-            </div>
-            <div class="kn-card kn-dashboard__card">
-              <span class="kn-dashboard__label">This week</span>
-              <span class="kn-dashboard__value" id="dashboard-week-count">0</span>
-            </div>
-          </div>
-          <div class="kn-card kn-dashboard__recent">
-            <h2 class="kn-dashboard__recent-title">Recent activity</h2>
-            <div id="dashboard-recent-list"></div>
-          </div>
+        <p class="kn-app-route__subtext">Your job matches and activity.</p>
+        <div class="kn-empty">
+          <p class="kn-empty__text">No jobs yet. In the next step, you will load a realistic dataset.</p>
         </div>
       </section>
+
       <section id="route-settings" class="kn-app-route" aria-label="Settings">
         <h1 class="kn-app-route__heading">Settings</h1>
-        <p class="kn-app-route__subtext">This section will be built in the next step.</p>
-      </section>
-      <section id="route-saved" class="kn-app-route" aria-label="Saved">
-        <h1 class="kn-app-route__heading">Saved</h1>
-        <p class="kn-app-route__subtext">Jobs and notifications you've saved for later.</p>
-        <div class="kn-saved">
-          <form class="kn-saved-form" id="saved-form">
-            <input type="text" class="kn-input kn-saved-form__input" name="title" placeholder="Job title" required />
-            <input type="text" class="kn-input kn-saved-form__input" name="company" placeholder="Company" />
-            <input type="url" class="kn-input kn-saved-form__input" name="url" placeholder="Link (optional)" />
-            <button type="submit" class="kn-btn kn-btn--primary">Save</button>
-          </form>
-          <div class="kn-saved-list" id="saved-list"></div>
+        <p class="kn-app-route__subtext">Configure your job preferences.</p>
+        <div class="kn-settings">
+          <div class="kn-settings__field">
+            <label class="kn-settings__label" for="pref-role">Role keywords</label>
+            <input type="text" class="kn-input" id="pref-role" placeholder="e.g. Frontend, React" />
+          </div>
+          <div class="kn-settings__field">
+            <label class="kn-settings__label" for="pref-locations">Preferred locations</label>
+            <input type="text" class="kn-input" id="pref-locations" placeholder="e.g. New York, Remote" />
+          </div>
+          <div class="kn-settings__field">
+            <label class="kn-settings__label" for="pref-mode">Mode</label>
+            <select class="kn-input" id="pref-mode">
+              <option value="">Select</option>
+              <option value="remote">Remote</option>
+              <option value="hybrid">Hybrid</option>
+              <option value="onsite">Onsite</option>
+            </select>
+          </div>
+          <div class="kn-settings__field">
+            <label class="kn-settings__label" for="pref-experience">Experience level</label>
+            <input type="text" class="kn-input" id="pref-experience" placeholder="e.g. Mid, Senior" />
+          </div>
         </div>
       </section>
+
+      <section id="route-saved" class="kn-app-route" aria-label="Saved">
+        <h1 class="kn-app-route__heading">Saved</h1>
+        <p class="kn-app-route__subtext">Jobs you've saved for later.</p>
+        <div class="kn-empty">
+          <p class="kn-empty__text">No saved jobs yet.</p>
+          <p class="kn-empty__hint">Saved jobs will appear here.</p>
+        </div>
+      </section>
+
       <section id="route-digest" class="kn-app-route" aria-label="Digest">
         <h1 class="kn-app-route__heading">Digest</h1>
-        <p class="kn-app-route__subtext">This section will be built in the next step.</p>
+        <p class="kn-app-route__subtext">Your daily job digest.</p>
+        <div class="kn-empty">
+          <p class="kn-empty__text">No digest yet.</p>
+          <p class="kn-empty__hint">Configure settings and your daily digest will appear here.</p>
+        </div>
       </section>
+
       <section id="route-proof" class="kn-app-route" aria-label="Proof">
         <h1 class="kn-app-route__heading">Proof</h1>
-        <p class="kn-app-route__subtext">This section will be built in the next step.</p>
+        <p class="kn-app-route__subtext">Artifact collection and verification.</p>
+        <div class="kn-empty">
+          <p class="kn-empty__text">Placeholder for artifact collection.</p>
+          <p class="kn-empty__hint">Proof artifacts will be collected here in a later step.</p>
+        </div>
       </section>
     </main>
   </div>

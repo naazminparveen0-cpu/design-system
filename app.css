@@ -1,9 +1,8 @@
 /**
- * Job Notification Tracker — App shell
- * KodNest Premium Build System. Off-white, deep red accent, serif headings, high whitespace.
+ * Job Notification Tracker — Premium app skeleton
+ * KodNest: off-white, deep red accent, serif headings, calm high whitespace.
  */
 
-/* ——— App layout ——— */
 .kn-app {
   min-height: 100vh;
   display: flex;
@@ -16,7 +15,6 @@
   padding: var(--kn-space-4) var(--kn-space-4) var(--kn-space-5);
 }
 
-/* ——— Top navigation ——— */
 .kn-app-nav {
   display: flex;
   align-items: center;
@@ -56,7 +54,6 @@
   border-bottom-color: var(--kn-accent);
 }
 
-/* Hamburger (hidden on desktop) */
 .kn-app-nav__toggle {
   display: none;
   align-items: center;
@@ -84,7 +81,6 @@
   box-shadow: 0 -6px 0 currentColor, 0 6px 0 currentColor;
 }
 
-/* ——— Placeholder page ——— */
 .kn-app-route {
   display: none;
   max-width: var(--kn-text-max-width);
@@ -108,179 +104,81 @@
   line-height: var(--kn-leading-relaxed);
   color: var(--kn-text-primary);
   opacity: 0.7;
-  margin: 0;
+  margin: 0 0 var(--kn-space-3);
 }
 
-/* ——— Dashboard ——— */
-.kn-dashboard {
-  margin-top: var(--kn-space-4);
+.kn-landing {
+  padding-top: var(--kn-space-5);
 }
 
-.kn-dashboard__summary {
-  display: flex;
-  gap: var(--kn-space-2);
-  margin-bottom: var(--kn-space-3);
-}
-
-.kn-dashboard__card {
-  min-width: 120px;
-  padding: var(--kn-space-2) var(--kn-space-3);
-}
-
-.kn-dashboard__label {
-  display: block;
-  font-size: var(--kn-text-xs);
-  color: var(--kn-text-primary);
-  opacity: 0.7;
-  margin-bottom: var(--kn-space-1);
-}
-
-.kn-dashboard__value {
+.kn-landing__headline {
   font-family: var(--kn-font-heading);
-  font-size: var(--kn-text-2xl);
+  font-size: var(--kn-text-3xl);
   font-weight: 600;
-  color: var(--kn-text-primary);
-}
-
-.kn-dashboard__recent {
-  padding: var(--kn-space-3);
-}
-
-.kn-dashboard__recent-title {
-  font-family: var(--kn-font-body);
-  font-size: var(--kn-text-sm);
-  font-weight: 600;
+  letter-spacing: var(--kn-tracking-tight);
+  line-height: var(--kn-leading-tight);
   margin: 0 0 var(--kn-space-2);
   color: var(--kn-text-primary);
 }
 
-.kn-dashboard__empty {
-  padding: var(--kn-space-4) 0;
-}
-
-.kn-dashboard__empty-text {
-  font-size: var(--kn-text-sm);
-  margin: 0 0 var(--kn-space-1);
+.kn-landing__subtext {
+  font-size: var(--kn-text-lg);
+  line-height: var(--kn-leading-relaxed);
   color: var(--kn-text-primary);
+  opacity: 0.85;
+  margin: 0 0 var(--kn-space-4);
+  max-width: 480px;
 }
 
-.kn-dashboard__empty-hint {
-  font-size: var(--kn-text-sm);
-  margin: 0;
-  color: var(--kn-text-primary);
-  opacity: 0.7;
+.kn-landing__cta {
+  text-decoration: none;
 }
 
-.kn-dashboard__recent-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.kn-dashboard__recent-li {
-  font-size: var(--kn-text-sm);
-  padding: var(--kn-space-1) 0;
-  border-bottom: 1px solid var(--kn-border);
-  color: var(--kn-text-primary);
-}
-
-.kn-dashboard__recent-li:last-child {
-  border-bottom: none;
-}
-
-/* ——— Saved page ——— */
-.kn-saved {
-  margin-top: var(--kn-space-4);
-}
-
-.kn-saved-form {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--kn-space-2);
-  align-items: flex-end;
-  margin-bottom: var(--kn-space-3);
-}
-
-.kn-saved-form__input {
-  flex: 1;
-  min-width: 140px;
-}
-
-.kn-saved-list {
+.kn-settings {
   margin-top: var(--kn-space-2);
 }
 
-.kn-saved-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.kn-settings__field {
+  margin-bottom: var(--kn-space-3);
 }
 
-.kn-saved-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--kn-space-2);
-  padding: var(--kn-space-2);
-  border: 1px solid var(--kn-border);
-  border-radius: var(--kn-radius);
-  margin-bottom: var(--kn-space-1);
-  background: var(--kn-input-bg);
-}
-
-.kn-saved-item__main {
-  flex: 1;
-  min-width: 0;
+.kn-settings__label {
+  display: block;
   font-size: var(--kn-text-sm);
-}
-
-.kn-saved-item__title {
   font-weight: 500;
   color: var(--kn-text-primary);
+  margin-bottom: var(--kn-space-1);
 }
 
-.kn-saved-item__company {
-  color: var(--kn-text-primary);
-  opacity: 0.8;
+.kn-settings .kn-input {
+  max-width: 400px;
 }
 
-.kn-saved-item__link {
-  color: var(--kn-accent);
-  margin-left: var(--kn-space-1);
+.kn-empty {
+  padding: var(--kn-space-5) 0;
 }
 
-.kn-saved-item__remove {
-  flex-shrink: 0;
-}
-
-.kn-saved-empty {
-  padding: var(--kn-space-4) 0;
-}
-
-.kn-saved-empty__text {
+.kn-empty__text {
   font-size: var(--kn-text-sm);
   margin: 0 0 var(--kn-space-1);
   color: var(--kn-text-primary);
 }
 
-.kn-saved-empty__hint {
+.kn-empty__hint {
   font-size: var(--kn-text-sm);
   margin: 0;
   color: var(--kn-text-primary);
   opacity: 0.7;
 }
 
-/* ——— Mobile: hamburger menu ——— */
 @media (max-width: 768px) {
   .kn-app-nav {
     flex-wrap: wrap;
     justify-content: flex-end;
   }
-
   .kn-app-nav__toggle {
     display: flex;
   }
-
   .kn-app-nav__list {
     display: none;
     width: 100%;
@@ -291,19 +189,19 @@
     border-top: 1px solid var(--kn-border);
     margin-top: var(--kn-space-2);
   }
-
   .kn-app-nav__list--open {
     display: flex;
   }
-
   .kn-app-nav__link {
     padding: var(--kn-space-2);
     border-bottom: none;
     border-left: 3px solid transparent;
   }
-
   .kn-app-nav__link--active {
     border-left-color: var(--kn-accent);
     border-bottom-color: transparent;
+  }
+  .kn-landing__headline {
+    font-size: var(--kn-text-2xl);
   }
 }
