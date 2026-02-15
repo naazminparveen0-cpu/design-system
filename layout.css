@@ -1,0 +1,127 @@
+/**
+ * KodNest Premium Build System — Global Layout
+ * [Top Bar] → [Context Header] → [Primary Workspace + Secondary Panel] → [Proof Footer]
+ */
+
+/* Page shell */
+.kn-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ——— Top Bar ——— */
+.kn-top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--kn-space-2) var(--kn-space-4);
+  border-bottom: 1px solid var(--kn-border);
+  background: var(--kn-background);
+  flex-shrink: 0;
+}
+
+.kn-top-bar__project {
+  font-family: var(--kn-font-body);
+  font-size: var(--kn-text-sm);
+  font-weight: 500;
+  color: var(--kn-text-primary);
+}
+
+.kn-top-bar__progress {
+  font-size: var(--kn-text-sm);
+  color: var(--kn-text-primary);
+}
+
+.kn-top-bar__status {
+  /* Badge: Not Started / In Progress / Shipped — see components */
+}
+
+/* ——— Context Header ——— */
+.kn-context-header {
+  padding: var(--kn-space-4) var(--kn-space-4) var(--kn-space-3);
+  flex-shrink: 0;
+}
+
+.kn-context-header__headline {
+  font-family: var(--kn-font-heading);
+  font-size: var(--kn-text-3xl);
+  font-weight: 600;
+  letter-spacing: var(--kn-tracking-tight);
+  margin: 0 0 var(--kn-space-1);
+}
+
+.kn-context-header__subtext {
+  font-size: var(--kn-text-sm);
+  line-height: var(--kn-leading-body);
+  color: var(--kn-text-primary);
+  margin: 0;
+  max-width: var(--kn-text-max-width);
+}
+
+/* ——— Main content: Workspace + Panel ——— */
+.kn-main {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+}
+
+.kn-workspace {
+  width: 70%;
+  padding: var(--kn-space-3) var(--kn-space-4);
+  overflow: auto;
+}
+
+.kn-panel {
+  width: 30%;
+  padding: var(--kn-space-3) var(--kn-space-4);
+  border-left: 1px solid var(--kn-border);
+  background: var(--kn-background);
+  overflow: auto;
+}
+
+.kn-panel__explanation {
+  font-size: var(--kn-text-sm);
+  line-height: var(--kn-leading-body);
+  margin: 0 0 var(--kn-space-2);
+}
+
+/* ——— Proof Footer (persistent) ——— */
+.kn-proof-footer {
+  padding: var(--kn-space-2) var(--kn-space-4);
+  border-top: 1px solid var(--kn-border);
+  background: var(--kn-background);
+  flex-shrink: 0;
+}
+
+.kn-proof-footer__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--kn-space-2) var(--kn-space-4);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.kn-proof-footer__item {
+  display: flex;
+  align-items: center;
+  gap: var(--kn-space-1);
+  font-size: var(--kn-text-sm);
+}
+
+.kn-proof-footer__checkbox {
+  width: 18px;
+  height: 18px;
+  border: 1px solid var(--kn-border);
+  border-radius: var(--kn-radius);
+  background: var(--kn-input-bg);
+  accent-color: var(--kn-accent);
+  cursor: pointer;
+  transition: border-color var(--kn-transition);
+}
+
+.kn-proof-footer__checkbox:focus-visible {
+  outline: 2px solid var(--kn-border-focus);
+  outline-offset: 2px;
+}

@@ -1,0 +1,72 @@
+/**
+ * KodNest Premium Build System — Base Styles
+ * Calm, intentional, coherent. No visual noise.
+ */
+
+@import "./tokens/colors.css";
+@import "./tokens/typography.css";
+@import "./tokens/spacing.css";
+@import "./tokens/motion.css";
+@import "./tokens/radius.css";
+
+/* Minimal reset — only what’s needed */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  background: var(--kn-background);
+  color: var(--kn-text-primary);
+  font-family: var(--kn-font-body);
+  font-size: var(--kn-text-base);
+  line-height: var(--kn-leading-body);
+}
+
+/* Text block constraint */
+.kn-text-block {
+  max-width: var(--kn-text-max-width);
+}
+
+/* Headings — serif, generous spacing */
+h1, h2, h3, .kn-heading {
+  font-family: var(--kn-font-heading);
+  font-weight: 600;
+  letter-spacing: var(--kn-tracking-tight);
+  line-height: var(--kn-leading-tight);
+  margin: 0 0 var(--kn-space-2);
+}
+
+h1, .kn-heading-1 {
+  font-size: var(--kn-text-3xl);
+}
+
+h2, .kn-heading-2 {
+  font-size: var(--kn-text-2xl);
+}
+
+h3, .kn-heading-3 {
+  font-size: var(--kn-text-xl);
+}
+
+/* Body copy */
+p {
+  margin: 0 0 var(--kn-space-2);
+  font-size: var(--kn-text-sm);
+  line-height: var(--kn-leading-relaxed);
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+/* Focus — clear, not heavy */
+:focus-visible {
+  outline: 2px solid var(--kn-border-focus);
+  outline-offset: 2px;
+}

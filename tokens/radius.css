@@ -1,0 +1,8 @@
+/**
+ * KodNest Premium Build System — Border Radius
+ * Same radius everywhere. No decorative variation.
+ */
+
+:root {
+  --kn-radius: 4px;
+}

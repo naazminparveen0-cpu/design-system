@@ -1,0 +1,178 @@
+/**
+ * KodNest Premium Build System — Components
+ * Same hover and radius everywhere. No drop shadows, subtle borders.
+ */
+
+/* ——— Buttons ——— */
+.kn-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--kn-space-1);
+  padding: var(--kn-space-1) var(--kn-space-2);
+  font-family: var(--kn-font-body);
+  font-size: var(--kn-text-sm);
+  font-weight: 500;
+  border-radius: var(--kn-radius);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background-color var(--kn-transition), border-color var(--kn-transition), color var(--kn-transition);
+}
+
+.kn-btn:focus-visible {
+  outline: 2px solid var(--kn-border-focus);
+  outline-offset: 2px;
+}
+
+.kn-btn--primary {
+  background: var(--kn-accent);
+  color: #FFFFFF;
+  border-color: var(--kn-accent);
+}
+
+.kn-btn--primary:hover {
+  background: #6E0000;
+  border-color: #6E0000;
+}
+
+.kn-btn--secondary {
+  background: transparent;
+  color: var(--kn-text-primary);
+  border-color: var(--kn-border);
+}
+
+.kn-btn--secondary:hover {
+  border-color: var(--kn-text-primary);
+}
+
+/* ——— Status Badge (Top Bar) ——— */
+.kn-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--kn-space-1) var(--kn-space-2);
+  font-size: var(--kn-text-xs);
+  font-weight: 500;
+  border-radius: var(--kn-radius);
+  border: 1px solid var(--kn-border);
+  background: var(--kn-input-bg);
+  color: var(--kn-text-primary);
+}
+
+.kn-badge--shipped {
+  border-color: var(--kn-success);
+  color: var(--kn-success);
+}
+
+.kn-badge--in-progress {
+  border-color: var(--kn-warning);
+  color: var(--kn-warning);
+}
+
+/* ——— Cards ——— */
+.kn-card {
+  padding: var(--kn-space-3);
+  border: 1px solid var(--kn-border);
+  border-radius: var(--kn-radius);
+  background: var(--kn-input-bg);
+  transition: border-color var(--kn-transition);
+}
+
+.kn-card:hover {
+  border-color: #D5D4D0;
+}
+
+/* ——— Inputs ——— */
+.kn-input {
+  width: 100%;
+  padding: var(--kn-space-1) var(--kn-space-2);
+  font-family: var(--kn-font-body);
+  font-size: var(--kn-text-sm);
+  color: var(--kn-text-primary);
+  background: var(--kn-input-bg);
+  border: 1px solid var(--kn-border);
+  border-radius: var(--kn-radius);
+  transition: border-color var(--kn-transition);
+}
+
+.kn-input::placeholder {
+  color: var(--kn-text-primary);
+  opacity: 0.5;
+}
+
+.kn-input:hover {
+  border-color: #D5D4D0;
+}
+
+.kn-input:focus {
+  border-color: var(--kn-border-focus);
+  outline: none;
+}
+
+/* ——— Copyable prompt box (Secondary Panel) ——— */
+.kn-prompt-box {
+  padding: var(--kn-space-2);
+  font-family: var(--kn-font-body);
+  font-size: var(--kn-text-xs);
+  line-height: var(--kn-leading-body);
+  color: var(--kn-text-primary);
+  background: var(--kn-input-bg);
+  border: 1px solid var(--kn-border);
+  border-radius: var(--kn-radius);
+  margin-bottom: var(--kn-space-2);
+}
+
+.kn-prompt-box__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--kn-space-1);
+  margin-top: var(--kn-space-2);
+}
+
+/* Panel actions: Copy, Build in Lovable, It Worked, Error, Add Screenshot */
+.kn-panel-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--kn-space-1);
+}
+
+/* ——— Error state ——— */
+.kn-error {
+  padding: var(--kn-space-2);
+  font-size: var(--kn-text-sm);
+  line-height: var(--kn-leading-body);
+  color: var(--kn-text-primary);
+  border: 1px solid var(--kn-border);
+  border-radius: var(--kn-radius);
+  background: var(--kn-input-bg);
+}
+
+.kn-error__title {
+  font-weight: 600;
+  margin: 0 0 var(--kn-space-1);
+}
+
+.kn-error__message {
+  margin: 0 0 var(--kn-space-1);
+}
+
+.kn-error__fix {
+  margin: 0;
+  opacity: 0.9;
+}
+
+/* ——— Empty state ——— */
+.kn-empty {
+  padding: var(--kn-space-4);
+  text-align: center;
+  font-size: var(--kn-text-sm);
+  line-height: var(--kn-leading-body);
+  color: var(--kn-text-primary);
+}
+
+.kn-empty__message {
+  margin: 0 0 var(--kn-space-2);
+}
+
+.kn-empty__action {
+  margin: 0;
+}

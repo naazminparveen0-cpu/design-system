@@ -1,0 +1,19 @@
+/**
+ * KodNest Premium Build System — Color Tokens
+ * Maximum 4 colors across entire system. No gradients, no neon.
+ */
+
+:root {
+  /* Core palette */
+  --kn-background: #F7F6F3;
+  --kn-text-primary: #111111;
+  --kn-accent: #8B0000;
+  --kn-success: #5A6B5A;
+  --kn-warning: #8B7355;
+
+  /* Derived (same palette, semantic use) */
+  --kn-text-secondary: #111111;
+  --kn-border: #E5E4E0;
+  --kn-border-focus: #8B0000;
+  --kn-input-bg: #FFFFFF;
+}
